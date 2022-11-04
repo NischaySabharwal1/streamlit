@@ -1,9 +1,6 @@
 import pandas as pd
 import streamlit as st
-import datetime as dt
 import numpy as np
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.linear_model import Lasso
 import pickle
 import warnings
 warnings.filterwarnings('ignore')
