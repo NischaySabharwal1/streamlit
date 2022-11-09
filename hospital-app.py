@@ -15,10 +15,10 @@ encode = {
 def model_pred(age:int=25, viral_load:float=1, severity_level:int=1, smoker=0, sex_male=0, region_northwest=0, region_southeast=0, region_southwest=0):
 
     #with open(r'C:\Users\Nischay\polyreg', 'rb') as file:
-    poly_model = pickle.load(open(r'C:\Users\Nischay\polyreg', 'rb'))
+    poly_model = pickle.load(open('polyreg', 'rb'))
     
     #with open(r'C:\Users\Nischay\hospital_LR_L1_model', 'rb') as file:
-    reg_model = pickle.load(open(r'C:\Users\Nischay\hospital_LR_L1_model', 'rb'))
+    reg_model = pickle.load(open('hospital_LR_L1_model', 'rb'))
 
     raw_input = np.array([[age, viral_load, severity_level, smoker, sex_male, region_northwest, region_southeast, region_southwest, 1]])
     transformed_input = poly_model.transform(raw_input)
